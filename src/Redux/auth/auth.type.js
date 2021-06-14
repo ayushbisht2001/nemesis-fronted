@@ -1,0 +1,8 @@
+export const USER_LOADING = 'USER_LOADING';
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const TOAST = 'TOAST';
+export const TOASTNULL = 'TOASTNULL';
+export const LOGINERROR = 'LOGINERROR'
+export const REGISTERERROR = 'REGISTERERROR'

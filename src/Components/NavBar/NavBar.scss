@@ -1,0 +1,54 @@
+@import '../../__theme.scss';
+
+
+.nav-style{
+    background : #f0455a ;
+     
+}
+
+.nav-style  .nav-link {
+    color : white !important;
+}
+
+.nav-style .navbar-left > li{
+
+    padding-left : 10px;
+}
+
+.nav-style .navbar-right > li{
+    padding-left: 10px;
+}
+
+.nav-btn-join{
+
+   border-radius : 20px;
+   border-color: white;
+
+}
+
+
+.nav-style .navbar-toggler{
+    border : none !important;
+    box-shadow: none !important;
+}
+
+.hamburger{
+  transform: scale(0.8);
+}
+
+.hamburger .line{
+    width: 30px;
+    height: 2px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 8px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  
+  .hamburger:hover{
+    cursor: pointer;
+  }
+ 

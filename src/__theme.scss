@@ -1,0 +1,59 @@
+$theme-gradient: linear-gradient(180deg,#f0455a,#f7766c);
+$border-radius: 30px;
+
+// Colors
+$color-1: #2f282e;
+$color-2: #161719;
+$color-3: #ede7e5;
+
+
+// Button Purple
+$button-color: #4242b2;
+$button-hover: #5151c4; //Hover
+
+// Text
+$text-color: #fff;
+$text-color-black: #000;
+
+// Font Size
+$font-h1: 48px;
+
+// Button Dark
+$button-dark: #000;
+$button-dark-hover: #4d4d4d;
+
+// Button Light
+$button-light: #fff; 
+$button-light-hover: #b2b2b2; 
+
+$fsize-0 : 12px;
+$fsize-1 : 30px;
+$fsize-2 : 40px;
+$fsize-3  : 60px;
+
+ 
+
+.round-btn{
+    padding: 5px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    border-radius: 50px;
+    border-color: rgba(255, 255, 255, 0.659) !important;
+    font-size : 18px !important;
+    font-weight: bold;
+    // text-align: center !important;
+
+
+}
+
+.bar{
+
+    position: relative;
+    height: 2px;
+    width : 15%;
+    background-color: red;
+    margin : 10px auto;
+    
+
+    text-align: center !important;
+}
