@@ -20,7 +20,7 @@ import { userRegister } from '../../Api/api.user';
     return (
         <>
         <nav className="navbar navbar-expand-lg navbar-light sticky-top  nav-style sticky p-2" >
-            <a className="navbar-brand text-light float-right " href="/"> {state.user.username ? <strong>Hey, Its me @{state.user.username}</strong> : <strong><i class="fas fa-question-circle fa-2x"></i> &ensp; Not Authenticated</strong>}</a>
+            <a className="navbar-brand text-light float-right " href="/"> {state.user.username ? <strong>Hey, Its me @{state.user.username}</strong> : <strong><i class="fas fa-question-circle fa-2x"></i> &ensp;Anonymous</strong>}</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="hamburger" id="hamburger-id">
                     <span class="line"></span>
