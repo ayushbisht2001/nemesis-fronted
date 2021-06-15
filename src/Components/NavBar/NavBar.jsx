@@ -36,7 +36,7 @@ import { userRegister } from '../../Api/api.user';
                 <> 
                 <li class="nav-item "  >
                     <button className="nav-btn-join btn btn-dark  round-btn " >  
-                    <Link to ="/"  onClick = {() => dispatch(logout())} className= "nav-link   waves-effect waves-light right-nav">Logout</Link>
+                    <Link to ="/"  onClick = {() => dispatch(logout())} className= "nav-link p-0  waves-effect waves-light right-nav">Logout</Link>
                     </button>
                 </li>
 
