@@ -85,37 +85,37 @@ const UpdateForm = (props) =>{
             <div className="col-12 mt-3 ">
                 <div className="card">
 
-                <div class="card-header bg-primary d-flex align-items-center justify-content-center text-light ">
+                <div class="card-header bg-dark d-flex align-items-center justify-content-center text-light ">
                     
                      <strong >Update Profile</strong>
                 </div>
                 <div className="card-body p-2">
                     <form onSubmit = {handleSubmit}>
-                    <div class="input-group mt-2">
-                            <div class="input-group-prepend">
-                            <span class="input-group-text bg-danger text-light" id="inputGroupPrepend">USERNAME</span>
+                    <div class="input-group mt-2 border border-dark ">
+                            <div class="input-group-prepend  border border-dark">
+                            <span class="input-group-text bg-dark text-light" id="inputGroupPrepend">USERNAME</span>
                             </div>
                             <input type="text" class="form-control" name="username"  onChange= {handleChange} placeholder={props.user.username} aria-describedby="inputGroupPrepend"  />
                         
                         </div>
 
-                        <div class="input-group mt-2">
-                            <div class="input-group-prepend">
-                            <span class="input-group-text bg-danger text-light" id="inputGroupPrepend">EMAIL</span>
+                        <div class="input-group mt-2  border border-dark">
+                            <div class="input-group-prepend  border border-dark">
+                            <span class="input-group-text bg-dark text-light" id="inputGroupPrepend">EMAIL</span>
                             </div>
                             <input type="text" class="form-control" name="email"  onChange= {handleChange}   placeholder={props.user.email} aria-describedby="inputGroupPrepend"  />
                         
                         </div>
                                 
-                        <div class="input-group mt-2">
-                            <div class="input-group-prepend">
-                            <span class="input-group-text bg-danger text-light" id="inputGroupPrepend">ADDRESS</span>
+                        <div class="input-group mt-2  border border-dark">
+                            <div class="input-group-prepend  border border-dark">
+                            <span class="input-group-text bg-dark text-light" id="inputGroupPrepend">ADDRESS</span>
                             </div>
                             <input type="text" class="form-control"  name="address"  onChange= {handleChange}  placeholder={props.user.address} aria-describedby="inputGroupPrepend"  />
                         
                         </div>
             
-                        <button type="submit" class="btn btn-primary mt-1">Edit</button>
+                        <button type="submit" class="btn btn-danger mt-1">Edit</button>
                         </form>
                 </div>
                 </div>
@@ -221,7 +221,7 @@ function UserList( {userData, fetchUsers} ) {
                                 {  state.isAuthenticated ?
                                 <div className="col-12 col-sm-4 col-lg-1 d-flex  flex-sm-column  justify-content-center align-items-center p-0">
                                     <button className="btn btn-danger d-block m-2" value = {user.username} onClick = {handleUserDeletion}><i class="fas fa-trash-alt"></i></button>
-                                    <button className = "btn btn-primary d-block m-2" value = {user.username} onClick= {handleUserUpdation}   ><i class="fas fa-user-edit"></i></button>
+                                    <button className = "btn btn-dark d-block m-2" value = {user.username} onClick= {handleUserUpdation}   ><i class="fas fa-user-edit"></i></button>
 
                                 </div> :<></> }
                             

@@ -141,9 +141,9 @@ function Form(props) {
                 {(props.type==='login')?<><LoginForm props={props} /><Redirect to="/login" /></> : <><RegisterForm  props={props}/> <Redirect to="/register" /> </>}
                 <div className="social-box">
                         <p>Or continue with</p>
-                        <div className="social-links">
-                            <a href="" ><i class="fab fa-google fa-2x"></i></a>
-                            <a href="" ><i class="fab fa-facebook fa-2x"></i></a>
+                        <div className="social-links  ">
+                            <a href="" className="text-dark" ><i class="fab fa-google fa-2x"></i></a>
+                            <a href="" className="text-dark" ><i class="fab fa-facebook fa-2x"></i></a>
                         </div>
                     </div>
                 </div>

@@ -20,13 +20,13 @@ export default function Entry(props) {
             <div className="container-fluid">
             <div className="row">
                 <ul class="topbar">
-                    <li class="topbar-item">
-                         <Link to ="/" style = {{textDecoration : "none", fontWeight : "bold"}}  ><h3 >Nemesis</h3></Link>
+                    <li class="topbar-item ">
+                         <Link to ="/" style = {{textDecoration : "none", fontWeight : "bold"}}  ><h3 className="text-dark" >Nemesis</h3></Link>
                          <div className="bar"></div>
                     </li>
                     <li class="topbar-item">
                       <p >{stateDict[state][2]}</p>
-                      <button  className="btn btn-primary round-btn " onClick = {()=> setstate(stateDict[state][0])}>{stateDict[state][1]}</button>
+                      <button  className="btn btn-dark round-btn " onClick = {()=> setstate(stateDict[state][0])}>{stateDict[state][1]}</button>
                     </li>                
                 </ul>
             </div>
