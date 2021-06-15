@@ -85,37 +85,37 @@ const UpdateForm = (props) =>{
             <div className="col-12 mt-3 ">
                 <div className="card">
 
-                <div class="card-header bg-dark d-flex align-items-center justify-content-center text-light ">
+                <div className="card-header bg-dark d-flex align-items-center justify-content-center text-light ">
                     
                      <strong >Update Profile</strong>
                 </div>
                 <div className="card-body p-2">
                     <form onSubmit = {handleSubmit}>
-                    <div class="input-group mt-2 border border-dark ">
-                            <div class="input-group-prepend  border border-dark">
-                            <span class="input-group-text bg-dark text-light" id="inputGroupPrepend">USERNAME</span>
+                    <div className="input-group mt-2 border border-dark ">
+                            <div className="input-group-prepend  border border-dark position-relative " style = {{minWidth : "10%"}} >
+                                <span className="input-group-text bg-dark text-light" id="inputGroupPrepend">USERNAME</span>
                             </div>
-                            <input type="text" class="form-control" name="username"  onChange= {handleChange} placeholder={props.user.username} aria-describedby="inputGroupPrepend"  />
+                            <input type="text" className="form-control" name="username"  onChange= {handleChange} placeholder={props.user.username} aria-describedby="inputGroupPrepend"  />
                         
                         </div>
 
-                        <div class="input-group mt-2  border border-dark">
-                            <div class="input-group-prepend  border border-dark">
-                            <span class="input-group-text bg-dark text-light" id="inputGroupPrepend">EMAIL</span>
+                        <div className="input-group mt-2  border border-danger">
+                            <div className="input-group-prepend  border border-danger position-relative"  >
+                            <span className="input-group-text bg-danger text-light" id="inputGroupPrepend"> EMAIL</span>
                             </div>
-                            <input type="text" class="form-control" name="email"  onChange= {handleChange}   placeholder={props.user.email} aria-describedby="inputGroupPrepend"  />
+                            <input type="text" className="form-control" name="email"  onChange= {handleChange}   placeholder={props.user.email} aria-describedby="inputGroupPrepend"  />
                         
                         </div>
                                 
-                        <div class="input-group mt-2  border border-dark">
-                            <div class="input-group-prepend  border border-dark">
-                            <span class="input-group-text bg-dark text-light" id="inputGroupPrepend">ADDRESS</span>
+                        <div className="input-group mt-2  border border-dark">
+                            <div className="input-group-prepend  border border-dark position-relative"  style = {{minWidth : "110px"}}>
+                            <span className="input-group-text bg-dark text-light" id="inputGroupPrepend">ADDRESS</span>
                             </div>
-                            <input type="text" class="form-control"  name="address"  onChange= {handleChange}  placeholder={props.user.address} aria-describedby="inputGroupPrepend"  />
+                            <input type="text" className="form-control"  name="address"  onChange= {handleChange}  placeholder={props.user.address} aria-describedby="inputGroupPrepend"  />
                         
                         </div>
             
-                        <button type="submit" class="btn btn-danger mt-1">Edit</button>
+                        <button type="submit" className="btn btn-danger mt-1">Save</button>
                         </form>
                 </div>
                 </div>
@@ -195,33 +195,33 @@ function UserList( {userData, fetchUsers} ) {
             ) : userData.error  ? (
              console.log(userData.error)
             ): (
-                <div className="container bg-light pt-5 pb-5 mt-5">
+                <div className="container-fluid mt-0 bg-light pt-5 pb-5 ">
                     <h1 className="text-center "> Users List</h1>
                     <div className="bar"></div>
 
                     { userData.users != undefined   ? userData.users.map( user =>
 
                         <>
-                        <div className="row justify-content-center mt-5">                          
-                                <div className="col-12 col-sm-6  ">
-                                    <div className="card">
-                                        <div class="card-header bg-danger d-flex align-items-center text-light">
-                                        <i class="fas fa-user-circle fa-2x "></i>&ensp; &ensp; 
+                        <div className="row justify-content-center mt-5" key= {user.username}>                          
+                                <div className="col-12 col-sm-6 " key = {user.username + "-col"}>
+                                    <div className="card shadow-lg"  key = {user.username + "-card"} > 
+                                        <div className="card-header bg-danger d-flex align-items-center text-light"  key = {user.username + "-head"}>
+                                        <i className="fas fa-user-circle fa-2x "  key = {user.username + "-i"}></i>&ensp; &ensp; 
                                          <span >  <strong >@{user.username}</strong></span>
                                         </div>
-                                        <ul class="list-group list-group-flush">
-                                            <li class="list-group-item"><strong>EMAIL </strong>&ensp; : &ensp;  {user.email}</li>
-                                            <li class="list-group-item"><strong>ADDRESS</strong>&ensp; : &ensp; {user.address}</li>                                            
+                                        <ul className="list-group list-group-flush"  key = {user.username + "-ul"}>
+                                            <li className="list-group-item"  key = {user.username + "-li1"}><strong>EMAIL </strong>&ensp; : &ensp;  {user.email}</li>
+                                            <li className="list-group-item"  key = {user.username + "-li2"}><strong>ADDRESS</strong>&ensp; : &ensp; {user.address}</li>                                            
                                         </ul>
                                     </div>
 
-                                    <UpdateForm user = {user} setCount = { i => setCount(count + i)} />
+                                    <UpdateForm user = {user} setCount = { i => setCount(count + i)}  key = {user.username + "-form"} />
 
                                 </div>
                                 {  state.isAuthenticated ?
-                                <div className="col-12 col-sm-4 col-lg-1 d-flex  flex-sm-column  justify-content-center align-items-center p-0">
-                                    <button className="btn btn-danger d-block m-2" value = {user.username} onClick = {handleUserDeletion}><i class="fas fa-trash-alt"></i></button>
-                                    <button className = "btn btn-dark d-block m-2" value = {user.username} onClick= {handleUserUpdation}   ><i class="fas fa-user-edit"></i></button>
+                                <div className="col-12 col-sm-4 col-lg-1 d-flex  flex-sm-column  justify-content-center align-items-center p-0"  key = {user.username + "-col2"}>
+                                    <button className="btn btn-danger d-block m-2" value = {user.username} onClick = {handleUserDeletion}  key = {user.username + "-btn1"}><i class="fas fa-trash-alt"></i></button>
+                                    <button className = "btn btn-dark d-block m-2" value = {user.username} onClick= {handleUserUpdation}  key = {user.username + "-btn2"}  ><i class="fas fa-user-edit"></i></button>
 
                                 </div> :<></> }
                             

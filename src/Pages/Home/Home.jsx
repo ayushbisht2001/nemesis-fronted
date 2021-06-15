@@ -6,6 +6,7 @@ import Loader from '../../Components/Loader/Loader'
 export default function Home() {
     return (
         <>
+
         <NavBar />
         <UserList />
     

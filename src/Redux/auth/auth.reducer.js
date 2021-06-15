@@ -33,7 +33,11 @@ const initialAuthState = {
       const { expires_at, token } = authobj;
       const now = new Date(Date.now());
 
-      console.log("TIME" , now , "EXPIRES AT", new Date(expires_at))
+      function getDifferenceInMinutes(date1, date2) {
+        const diffInMs = Math.abs(date2 - date1);
+        return diffInMs / (1000 * 60);
+      }
+      console.log("Token expires at : " , getDifferenceInMinutes(now, new Date(expires_at)), "minutes")
 
        if (new Date(expires_at) > now) {
         axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
@@ -48,13 +52,13 @@ const initialAuthState = {
       } else{
         console.log("removed")
         localStorage.removeItem("auth");
-        // return(
-        //  {
-        //   user : {},
-        //   isAuthenticated : false,
-        //   isLoading : false,
-        //   error : ''
-        // })
+        return(
+         {
+          user : {},
+          isAuthenticated : false,
+          isLoading : false,
+          error : ''
+        })
 
        }
       
