@@ -21,7 +21,8 @@ export default function Entry(props) {
             <div className="row">
                 <ul class="topbar">
                     <li class="topbar-item">
-                         <Link to ="/" ><h3>Nemesis</h3></Link>
+                         <Link to ="/" style = {{textDecoration : "none", fontWeight : "bold"}}  ><h3 >Nemesis</h3></Link>
+                         <div className="bar"></div>
                     </li>
                     <li class="topbar-item">
                       <p >{stateDict[state][2]}</p>

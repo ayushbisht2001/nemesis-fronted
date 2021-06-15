@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './userList.scss';
 import { logout } from '../../Redux/auth/auth.action';
 
-
+import Loader from '../Loader/Loader';
 
 
 
@@ -189,7 +189,7 @@ function UserList( {userData, fetchUsers} ) {
     return (
      
         userData.loading ? (
-            <h1>Loading</h1>
+            <Loader />
             ) : userData.error  ? (
              console.log(userData.error)
             ): (

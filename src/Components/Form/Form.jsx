@@ -51,7 +51,7 @@ const LoginForm = (props)=> {
         <form className="form-group p-4" id="login"  onSubmit = { handleSubmit }> 
             <input type="email" className="input-field" placeholder="Email" name="email" onChange = { handleChange } required></input>
             <input type="password" className="input-field" placeholder="Password" name="password" onChange = { handleChange } required></input>
-            <button type="submit" className="btn btn-danger  w-50 mx-auto mt-5 round-btn">Submit</button>
+            <button type="submit" className="btn btn-danger   w-20 pt-2 pb-2 mx-auto mt-5 round-btn">Submit</button>
         </form>
             
         </>
@@ -122,7 +122,7 @@ return (
         <label   id="label" for="pasword" >
         ADDRESS   </label>
         <input type="text" className="input-field"   name="address" onChange = {handleChange} required></input>
-        <button type="submit" className="btn btn-danger  w-50 mx-auto mt-5 round-btn">Register</button>
+        <button type="submit" className="btn btn-danger  w-20 pt-2 pb-2 mx-auto mt-5 round-btn">Register</button>
     </form>
   </>)
 }
@@ -139,7 +139,13 @@ function Form(props) {
             <div className="form-parent mt-5">
                 <div className="form-box mt-5 p-1 pt-5 pb-5"  >
                 {(props.type==='login')?<><LoginForm props={props} /><Redirect to="/login" /></> : <><RegisterForm  props={props}/> <Redirect to="/register" /> </>}
-                  
+                <div className="social-box">
+                        <p>Or continue with</p>
+                        <div className="social-links">
+                            <a href="" ><i class="fab fa-google fa-2x"></i></a>
+                            <a href="" ><i class="fab fa-facebook fa-2x"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
          </div>

@@ -52,6 +52,7 @@
     top : 10px;
     color : rgba(211, 40, 40, 0.884);
     font-weight: bold;
+    font-size : 12px;
  }
 
 .form-parent .form-box .form-group .input-field{
@@ -75,5 +76,19 @@
 }
  
  
+.social-box{
+    
+    margin: 10px  auto;
+ 
+}
+
+.social-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+}
+
+
 
 // ...............................
