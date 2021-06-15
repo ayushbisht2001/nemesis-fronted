@@ -71,6 +71,7 @@ const UpdateForm = (props) =>{
         
         })
         .catch((err) => {
+            alert(err)
             console.log(err);
         });
 
@@ -168,6 +169,7 @@ function UserList( {userData, fetchUsers} ) {
             }
         })
         .catch((err) => {
+            alert("Authentication required")
             console.log(err);
         });
 
@@ -216,12 +218,12 @@ function UserList( {userData, fetchUsers} ) {
                                     <UpdateForm user = {user} setCount = { i => setCount(count + i)} />
 
                                 </div>
-
+                                {  state.isAuthenticated ?
                                 <div className="col-12 col-sm-4 col-lg-1 d-flex  flex-sm-column  justify-content-center align-items-center p-0">
                                     <button className="btn btn-danger d-block m-2" value = {user.username} onClick = {handleUserDeletion}><i class="fas fa-trash-alt"></i></button>
                                     <button className = "btn btn-primary d-block m-2" value = {user.username} onClick= {handleUserUpdation}   ><i class="fas fa-user-edit"></i></button>
 
-                                </div>
+                                </div> :<></> }
                             
                                       
                         </div>

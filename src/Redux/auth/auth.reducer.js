@@ -122,15 +122,14 @@ const initialAuthState = {
         };
 
       case LOGINERROR:
-        
+        alert(action.payload)
         return {
           ...state,
           isLoading: false,
           error: 400
         }
       case REGISTERERROR:
-        console.log(action.payload.data.msg);
-       
+        alert(action.payload)
         return {
           ...state,
           isLoading: false,
